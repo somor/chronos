@@ -27,7 +27,7 @@ download [dist/chronos.groovy] and use the script similar to a shell command.
 
 * Change the permissions for the script
 ```
-chmod +x datecalculator.groovy
+chmod +x chronos.groovy
 ```
 * It should be ready to use
 ```
