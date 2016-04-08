@@ -1,4 +1,4 @@
-package au.com.au.com.chronos.scripts
+package au.com.chronos.scripts
 
 import org.junit.After
 import org.junit.Before
@@ -35,7 +35,14 @@ class DateCalculatorScriptsTests {
     }
 
     @Test
-    void testIsFourthYearALeapYear() {
+    void testInvalidValidEndtDate() {
+        binding.setVariable("args", ["07/11/1972", "08/11-1972"])
+        shell.evaluate(new File("src/au/com/au/com/chronos/scripts/datecalculator.groovy"))
+        assertEquals "Date must be in the following format: DD/MM/YYYY", out.toString().trim()
+    }
+
+    @Test
+    void testInvalidValidStarttDateBecauseOutOfRange() {
         binding.setVariable("args", ["07/11/1972", "08/11-1972"])
         shell.evaluate(new File("src/au/com/au/com/chronos/scripts/datecalculator.groovy"))
         assertEquals "Date must be in the following format: DD/MM/YYYY", out.toString().trim()
