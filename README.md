@@ -35,7 +35,7 @@ chmod +x chronos.groovy
 ```
 
 ## Examples
-*All examples assume you have already install Groovy*
+*All examples assume you have already installed Groovy*
 
 See usage information
 
