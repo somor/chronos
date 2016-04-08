@@ -21,7 +21,10 @@ groovy -version
 Groovy Version: 2.4.6 JVM: 1.8.0_77 Vendor: Oracle Corporation OS: Mac OS X
 ```
 
-* Copy the script under [dist] to your scripts folder or leave it there as you wish.
+* There is no need to clone the project to start using chronos, you can just
+download [dist/chronos.groovy] and use the script similar to a shell command.
+
+
 * Change the permissions for the script
 ```
 chmod +x datecalculator.groovy
