@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/somor/chronos.svg?branch=master)](https://travis-ci.org/somor/chronos)
+
 # Getting started with Chronos
 
 Chronos is a command line written in Groovy that helps you to calculate the number of full days between experiment's
