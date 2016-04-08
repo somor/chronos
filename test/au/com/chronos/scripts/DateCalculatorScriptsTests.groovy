@@ -35,15 +35,15 @@ class DateCalculatorScriptsTests {
     }
 
     @Test
-    void testInvalidValidEndtDate() {
+    void testInvalidValidEndDate() {
         binding.setVariable("args", ["07/11/1972", "08/11-1972"])
         shell.evaluate(new File("src/au/com/au/com/chronos/scripts/datecalculator.groovy"))
         assertEquals "Date must be in the following format: DD/MM/YYYY", out.toString().trim()
     }
 
     @Test
-    void testInvalidValidStarttDateBecauseOutOfRange() {
-        binding.setVariable("args", ["07/11/1972", "08/11-1972"])
+    void testInvalidValidStartDateBecauseOutOfRangeForDays() {
+        binding.setVariable("args", ["38/11/1972", "08/11-1972"])
         shell.evaluate(new File("src/au/com/au/com/chronos/scripts/datecalculator.groovy"))
         assertEquals "Date must be in the following format: DD/MM/YYYY", out.toString().trim()
     }
