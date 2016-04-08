@@ -4,7 +4,7 @@ Chronos is a command line written in Groovy that helps you to calculate the numb
 start and end dates.
 
 ## Install
-There are a few different ways you can start using chronos but the most recommended is the following:
+There are a few different ways you can start using chronos, but the most recommended is the following:
 
 * If you are on Linux or Mac you need to install Groovy
 ```
@@ -19,7 +19,7 @@ groovy -version
 Groovy Version: 2.4.6 JVM: 1.8.0_77 Vendor: Oracle Corporation OS: Mac OS X
 ```
 
-* Copy the script under [dist] to your scripts folder or leave it there as you prefer
+* Copy the script under [dist] to your scripts folder or leave it there as you wish.
 * Change the permissions for the script
 ```
 chmod +x datecalculator.groovy
@@ -64,7 +64,7 @@ Number of full days between 04/07/1984 and 25/12/1984: 173 days
 ### Considerations
 
 * The first and the last day are considered partial days and never counted.
-* The solution needs to cater for all valid dates between 01/01/1901 - 31/12/2999 = 401,402
+* The solution needs to cater for all valid dates between 01/01/1901 - 31/12/2999
 
 ### Requirements
 
