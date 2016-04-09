@@ -21,11 +21,11 @@
  * @return Number of full days between two dates without considering first and last day
  */
 
-def datecalculator(args) {
+def chronos(args) {
 
     String YEAR_FORMAT = 'DD/MM/YYYY'
 
-    def cli = new CliBuilder(usage: 'chronos.groovy[startDate] [endDate]')
+    def cli = new CliBuilder(usage: 'chronos.groovy -[hf] [startDate] [endDate]')
     cli.with {
         h(longOpt: 'help', 'Usage Information')
         f(longOpt: 'format', YEAR_FORMAT)
@@ -57,8 +57,9 @@ def datecalculator(args) {
         String date1 = extraArguments[0]
         String date2 = extraArguments[1]
 
-        if (!((date1 =~ /^[0-9]{2}\\/[0-9]{2}\\/[0-9]{4}/) && (date2 =~ /^[0-9]{2}\\/[0-9]{2}\\/[0-9]{4}/))) {
-            return "Date must be in the following format: ${YEAR_FORMAT}"
+        def dateValidator = /(0[1-9]|[12][0-9]|3[01])\/(0?[1-9]|1[012])\/((19|2[0-9])[0-9]{2})/
+        if (!((date1 =~ dateValidator) && (date2 =~ dateValidator))) {
+            return "Date must be in the following format: ${YEAR_FORMAT} and between 01/01/1901 - 31/12/2999"
         }
 
         Integer date1Day = date1.split('/')[0].toInteger()
@@ -117,5 +118,4 @@ private findLeapYearsFor(Integer year) {
 }
 
 
-println datecalculator(args)
-
+println chronos(args)

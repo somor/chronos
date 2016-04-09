@@ -57,7 +57,7 @@ def datecalculator(args) {
         String date1 = extraArguments[0]
         String date2 = extraArguments[1]
 
-        def dateValidator = /^(0[1-9]|[12][0-9]|3[01]\\/0[1-9]|1[012]\\/(19|29)[0-9]/
+        def dateValidator = /(0[1-9]|[12][0-9]|3[01])\/(0?[1-9]|1[012])\/((19|2[0-9])[0-9]{2})/
         if (!((date1 =~ dateValidator) && (date2 =~ dateValidator))) {
             return "Date must be in the following format: ${YEAR_FORMAT} and between 01/01/1901 - 31/12/2999"
         }
