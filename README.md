@@ -60,7 +60,7 @@ Get the days in between two experiments
 Number of full days between 04/07/1984 and 25/12/1984: 173 days
 ```
 
-# What is the problem with chronos?
+# Talking about chronos
 
 ### Problem Statement
 
@@ -80,7 +80,7 @@ Number of full days between 04/07/1984 and 25/12/1984: 173 days
 
 When you read the problem the first time, as a developer it looks a very straight forward problem.
 Probably after one minute finishing the problem statement, you really start thinking about the problem and you just
-realise that you can't remember much about calendars and the mathematics behind them. But no fear you must have,
+realise that you can't remember much about calendars and the mathematics behind them. But
 there is always Wikipedia to the rescue.
 
 ## Let's start with System Time
